@@ -1,0 +1,27 @@
+.logo{
+  display: flex;
+  align-items: center;
+
+  span{
+    margin-right: 10px;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: $vw-medium) {
+  .logo{
+    flex-direction: column;
+
+    transition: .3s all;
+
+    span{
+      font-size: 4rem;
+
+      margin-bottom: -10px;
+    }
+
+    &:hover{
+      color: var(--color-bg-primary);
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.hamburger{
+  cursor: pointer;
+}
+
+.hamburger-animated{
+  position: relative;
+
+  .material-icons{
+    font-size: 8rem;
+    color: var(--color-text-primary);
+  }
+
+  .icon-open, .icon-close{
+    transition: 0.3s transform ease-out;
+  }
+
+  .icon-close{
+    //transform: scale(0);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  &.open{
+    .icon-open, .icon-close{
+      transition: 0.3s transform ease-in;
+    }
+
+    .icon-close{
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .icon-open{
+      transform: scale(0);
+    }
+  }
+}
